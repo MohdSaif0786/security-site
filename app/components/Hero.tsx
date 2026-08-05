@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="hero-bg">
           <Image
             src="/hero_guard_new.png"
-            alt="Professional Aegis Shield security operations center"
+            alt="Professional Combatant Securitas operations center"
             fill
             style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.25 }}
             priority
@@ -65,7 +65,7 @@ export default function Hero() {
             </h1>
 
             <p className="hero-sub">
-              Aegis Shield Security Group delivers elite armed and unarmed guard services for
+              Combatant Securitas delivers elite armed and unarmed guard services for
               corporate campuses, residential communities, high-profile events, and executive
               principals. Precision. Discretion. Unwavering reliability.
             </p>

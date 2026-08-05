@@ -32,11 +32,10 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div className="footer-brand">
-            <div className="logo" style={{ marginBottom: '1.25rem' }}>
-              <div className="logo-icon" aria-hidden="true">🛡</div>
+            <div className="logo" style={{ marginBottom: '1.25rem', display: 'flex', alignItems: 'center' }}>
+              <img src="/image.png" alt="Combatant Securitas Logo" style={{ height: '40px', marginRight: '12px' }} />
               <div className="logo-text">
-                <div className="logo-name">AEGIS SHIELD</div>
-                <div className="logo-tagline">Security Group</div>
+                <div className="logo-name" style={{ fontSize: '1.2rem' }}>COMBATANT SECURITAS</div>
               </div>
             </div>
             <p>
@@ -87,7 +86,7 @@ export default function Footer() {
             </div>
             <div className="footer-contact-item">
               <strong style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.85rem', display: 'block', marginBottom: '0.15rem' }}>Email</strong>
-              <a href="mailto:info@aegisshieldsecurity.com" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>info@aegisshieldsecurity.com</a>
+              <a href="mailto:info@combatantsecuritas.com" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>info@combatantsecuritas.com</a>
             </div>
             <div className="footer-contact-item">
               <strong style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.85rem', display: 'block', marginBottom: '0.15rem' }}>Address</strong>
@@ -118,7 +117,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Aegis Shield Security Group, Inc. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Combatant Securitas. All rights reserved.</p>
           <nav className="footer-bottom-links" aria-label="Legal links">
             {legalLinks.map((l) => (
               <a key={l.label} href={l.href}>{l.label}</a>

@@ -6,6 +6,7 @@ import '../navbar.css';
 const navItems = [
   { label: 'Services', href: '#services' },
   { label: 'Why Choose Us', href: '#why-us' },
+  { label: 'Documents', href: '#documents' },
   { label: 'About', href: '#testimonials' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
@@ -32,10 +33,10 @@ export default function Navbar() {
     <>
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`} role="navigation" aria-label="Main navigation">
         <div className="container navbar-inner">
-          <a href="#" className="logo" aria-label="Aegis Shield Security Home">
+          <a href="#" className="logo" aria-label="Combatant Securitas Home" style={{ display: 'flex', alignItems: 'center' }}>
+            <img src="/image.png" alt="Combatant Securitas Logo" style={{ height: '40px', marginRight: '12px' }} />
             <div className="logo-text">
-              <div className="logo-name">AEGIS SHIELD</div>
-              <div className="logo-tagline">Security Group</div>
+              <div className="logo-name" style={{ fontSize: '1.2rem' }}>COMBATANT SECURITAS</div>
             </div>
           </a>
 

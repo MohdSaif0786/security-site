@@ -3,9 +3,9 @@ import './globals.css';
 import Navbar from './components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Professional Security Guard Services | Aegis Shield',
+  title: 'Professional Security Guard Services | Combatant Securitas',
   description:
-    'Hire licensed private security guards for commercial, residential, events & executive protection. Aegis Shield — trusted, 24/7 armed & unarmed security.',
+    'Hire licensed private security guards for commercial, residential, events & executive protection. Combatant Securitas — trusted, 24/7 armed & unarmed security.',
   keywords: [
     'professional security guard services',
     'hire private security',
@@ -15,18 +15,18 @@ export const metadata: Metadata = {
     'residential security patrol',
     'corporate security guards',
   ],
-  authors: [{ name: 'Aegis Shield Security Group' }],
+  authors: [{ name: 'Combatant Securitas' }],
   openGraph: {
-    title: 'Professional Security Guard Services | Aegis Shield Security Group',
+    title: 'Professional Security Guard Services | Combatant Securitas',
     description:
       'Elite armed and unarmed private security for commercial properties, events, residential communities, and executive protection. Fully licensed & insured.',
     type: 'website',
-    url: 'https://aegisshieldsecurity.com',
-    siteName: 'Aegis Shield Security Group',
+    url: 'https://combatantsecuritas.com',
+    siteName: 'Combatant Securitas',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Professional Security Guard Services | Aegis Shield',
+    title: 'Professional Security Guard Services | Combatant Securitas',
     description: 'Elite private security guard services. Licensed, insured, 24/7 dispatch.',
   },
   robots: { index: true, follow: true },

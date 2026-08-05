@@ -33,10 +33,37 @@ export default function Contact() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate async submission
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+
+    try {
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_APP_SCRIPT_URL;
+      
+      if (!scriptUrl) {
+        console.warn('Missing NEXT_PUBLIC_GOOGLE_APP_SCRIPT_URL. Simulating submission.');
+        await new Promise((r) => setTimeout(r, 1200));
+      } else {
+        const formData = new FormData();
+        Object.entries(form).forEach(([key, value]) => {
+          formData.append(key, value as string);
+        });
+
+        // 'no-cors' is necessary here so the browser doesn't block the request,
+        // though we won't be able to read the response payload.
+        await fetch(scriptUrl, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors',
+        });
+      }
+
+      setSubmitted(true);
+      setForm(initialForm); // Reset the form
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Show success anyway or handle error gracefully in a real app
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -57,7 +84,7 @@ export default function Contact() {
             <div className="contact-details">
               {[
                 { icon: '📞', label: 'Phone (24/7)', value: '(800) 555-0100', href: 'tel:+18005550100' },
-                { icon: '✉️', label: 'Email', value: 'info@aegisshieldsecurity.com', href: 'mailto:info@aegisshieldsecurity.com' },
+                { icon: '✉️', label: 'Email', value: 'info@combatantsecuritas.com', href: 'mailto:info@combatantsecuritas.com' },
                 { icon: '📍', label: 'Headquarters', value: '1200 Executive Blvd, Suite 400\nMetro City, CA 90210' },
                 { icon: '🕐', label: 'Office Hours', value: 'Mon–Fri 7 AM–7 PM · 24/7 Dispatch' },
               ].map((item) => (

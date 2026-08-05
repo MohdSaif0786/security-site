@@ -36,7 +36,7 @@ export default function WhyUs() {
             <div className="why-image-frame">
               <Image
                 src="/services_collage.png"
-                alt="Aegis Shield security team protecting multiple environments"
+                alt="Combatant Securitas team protecting multiple environments"
                 width={600}
                 height={520}
                 style={{ width: '100%', height: '520px', objectFit: 'cover' }}
@@ -50,11 +50,11 @@ export default function WhyUs() {
 
           {/* Text column */}
           <div className="why-text-col">
-            <span className="section-label">Why Aegis Shield</span>
+            <span className="section-label">Why Combatant Securitas</span>
             <h2 id="why-title">The Standard Others <br />Aspire To Reach</h2>
             <div className="gold-line" aria-hidden="true" />
             <p>
-              In an industry plagued by high turnover and minimal oversight, Aegis Shield operates
+              In an industry plagued by high turnover and minimal oversight, Combatant Securitas operates
               differently. We invest in people, process, and technology—so that when it matters
               most, our clients experience zero failures.
             </p>

@@ -18,9 +18,9 @@ const faqs = [
   },
   {
     id: 'licensing',
-    question: 'Is Aegis Shield fully licensed, bonded, and insured?',
+    question: 'Is Combatant Securitas fully licensed, bonded, and insured?',
     answer:
-      "Absolutely. Aegis Shield Security Group holds a current state Private Patrol Operator (PPO) license, maintains $5 million in general liability coverage, and carries a $1 million workers' compensation policy. All deployed officers hold individual Guard Registration certificates. We are happy to provide certificates of insurance naming your organization as an additional insured upon request.",
+      "Absolutely. Combatant Securitas holds a current state Private Patrol Operator (PPO) license, maintains $5 million in general liability coverage, and carries a $1 million workers' compensation policy. All deployed officers hold individual Guard Registration certificates. We are happy to provide certificates of insurance naming your organization as an additional insured upon request.",
   },
   {
     id: 'contract',

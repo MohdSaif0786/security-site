@@ -7,7 +7,7 @@ const testimonials = [
     id: 'testimonial-jennifer',
     stars: 5,
     quote:
-      "We manage a 42-floor commercial tower in the financial district and had cycled through three security vendors in two years. Aegis Shield has been with us for 18 months now, and for the first time, I can genuinely say I don't think about security anymore—because I know it's handled. Their officers are impeccably presented, proactive about reporting, and the dispatch team responds to my calls within minutes. The ROI has been tangible: incidents are down 60%, and tenants have noticed the difference.",
+      "We manage a 42-floor commercial tower in the financial district and had cycled through three security vendors in two years. Combatant Securitas has been with us for 18 months now, and for the first time, I can genuinely say I don't think about security anymore—because I know it's handled. Their officers are impeccably presented, proactive about reporting, and the dispatch team responds to my calls within minutes. The ROI has been tangible: incidents are down 60%, and tenants have noticed the difference.",
     name: 'Jennifer M.',
     title: 'Corporate Facilities Director',
     company: 'Pinnacle Properties Group',
@@ -17,7 +17,7 @@ const testimonials = [
     id: 'testimonial-marcus',
     stars: 5,
     quote:
-      "I produce large-scale corporate conferences and product launches—events where a single security misstep can end up on social media and tank a client relationship. Aegis Shield handled crowd management for our 4,200-person annual summit and was absolutely flawless. Pre-event planning was thorough, the team was briefed down to the detail, and on the day they blended in while running a tight operation. Not one incident. I won't work with anyone else for events of this scale.",
+      "I produce large-scale corporate conferences and product launches—events where a single security misstep can end up on social media and tank a client relationship. Combatant Securitas handled crowd management for our 4,200-person annual summit and was absolutely flawless. Pre-event planning was thorough, the team was briefed down to the detail, and on the day they blended in while running a tight operation. Not one incident. I won't work with anyone else for events of this scale.",
     name: 'Marcus T.',
     title: 'Senior Event Director',
     company: 'Apex Production Co.',
