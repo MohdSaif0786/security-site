@@ -82,15 +82,15 @@ export default function Footer() {
             <h4>Contact</h4>
             <div className="footer-contact-item">
               <strong style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.85rem', display: 'block', marginBottom: '0.15rem' }}>24/7 Dispatch</strong>
-              <a href="tel:+18005550100" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>(800) 555-0100</a>
+              <a href="tel:+919467295673" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>+91 94672 95673</a>
             </div>
             <div className="footer-contact-item">
               <strong style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.85rem', display: 'block', marginBottom: '0.15rem' }}>Email</strong>
-              <a href="mailto:info@combatantsecuritas.com" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>info@combatantsecuritas.com</a>
+              <a href="mailto:tinga.bull@gmail.com" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>tinga.bull@gmail.com</a>
             </div>
             <div className="footer-contact-item">
               <strong style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.85rem', display: 'block', marginBottom: '0.15rem' }}>Address</strong>
-              <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', display: 'block' }}>1200 Executive Blvd, Suite 400<br />Metro City, CA 90210</span>
+              <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', display: 'block' }}>SHOP NO 1960, CABIN NO.1, FIRST FLOOR<br />SECTOR 45B, CHANDIGARH</span>
             </div>
           </div>
 

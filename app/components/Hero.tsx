@@ -74,8 +74,8 @@ export default function Hero() {
               <a href="#contact" className="btn-primary" id="hero-cta-primary" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
                 Get a Custom Security Plan
               </a>
-              <a href="tel:+18005550100" className="btn-secondary" id="hero-cta-call">
-                Call (800) 555-0100
+              <a href="tel:+919467295673" className="btn-secondary" id="hero-cta-call">
+                Call +91 94672 95673
               </a>
             </div>
 
@@ -109,10 +109,6 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="scroll-indicator" aria-hidden="true">
-          <span>Scroll</span>
-          <span className="scroll-arrow">↓</span>
-        </div>
       </section>
 
       {/* ── Social Proof Banner ── */}

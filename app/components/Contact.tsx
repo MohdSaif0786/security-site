@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import { Phone, Mail, MapPin, Clock, CheckCircle, Shield, Lock } from 'lucide-react';
 import '../sections.css';
 
 type FormData = {
@@ -83,10 +84,10 @@ export default function Contact() {
 
             <div className="contact-details">
               {[
-                { icon: '📞', label: 'Phone (24/7)', value: '(800) 555-0100', href: 'tel:+18005550100' },
-                { icon: '✉️', label: 'Email', value: 'info@combatantsecuritas.com', href: 'mailto:info@combatantsecuritas.com' },
-                { icon: '📍', label: 'Headquarters', value: '1200 Executive Blvd, Suite 400\nMetro City, CA 90210' },
-                { icon: '🕐', label: 'Office Hours', value: 'Mon–Fri 7 AM–7 PM · 24/7 Dispatch' },
+                { icon: <Phone size={20} />, label: 'Phone (24/7)', value: '+91 94672 95673', href: 'tel:+919467295673' },
+                { icon: <Mail size={20} />, label: 'Email', value: 'tinga.bull@gmail.com', href: 'mailto:tinga.bull@gmail.com' },
+                { icon: <MapPin size={20} />, label: 'Headquarters', value: 'SHOP NO 1960, CABIN NO.1, FIRST FLOOR\nSECTOR 45B, CHANDIGARH' },
+                { icon: <Clock size={20} />, label: 'Office Hours', value: 'Mon–Fri 7 AM–7 PM · 24/7 Dispatch' },
               ].map((item) => (
                 <div key={item.label} className="contact-detail">
                   <div className="contact-detail-icon" aria-hidden="true">{item.icon}</div>
@@ -107,14 +108,16 @@ export default function Contact() {
           <div className="contact-form-wrap">
             {submitted ? (
               <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
-                <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>✅</div>
+                <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
+                  <CheckCircle size={56} color="#10b981" />
+                </div>
                 <h3 style={{ color: 'var(--white)', fontSize: '1.3rem', marginBottom: '0.75rem' }}>
                   Request Received!
                 </h3>
                 <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: '1.7' }}>
                   A senior security consultant will contact you within 2 business hours.
                   If your need is urgent, call us directly at{' '}
-                  <a href="tel:+18005550100" style={{ color: 'var(--gold)' }}>(800) 555-0100</a>.
+                  <a href="tel:+919467295673" style={{ color: 'var(--gold)' }}>+91 94672 95673</a>.
                 </p>
               </div>
             ) : (
@@ -220,13 +223,14 @@ export default function Contact() {
                     className="btn-red form-submit"
                     id="contact-form-submit"
                     disabled={loading}
+                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
                   >
-                    {loading ? '⏳ Sending…' : '🛡 Send My Security Request'}
+                    {loading ? '⏳ Sending…' : <><Shield size={20} /> Send My Security Request</>}
                   </button>
                 </form>
 
                 <p className="form-disclaimer">
-                  🔒 Your information is private and never sold. We will only contact you about your security inquiry.
+                  <Lock size={14} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '4px' }} /> Your information is private and never sold. We will only contact you about your security inquiry.
                 </p>
               </>
             )}

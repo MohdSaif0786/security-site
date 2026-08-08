@@ -1,26 +1,27 @@
 'use client';
 
 import Image from 'next/image';
+import { Crosshair, Radio, GraduationCap, Zap } from 'lucide-react';
 import '../sections.css';
 
 const differentiators = [
   {
-    icon: '🎯',
+    icon: <Crosshair size={24} />,
     title: 'Rigorous Multi-Stage Vetting',
     desc: 'Every officer undergoes a 7-point background check, psychological evaluation, and skills assessment before a single shift. Only the top 12% of applicants earn a badge.',
   },
   {
-    icon: '📡',
+    icon: <Radio size={24} />,
     title: '24/7 Live Dispatch & Command Center',
     desc: 'Our staffed operations center monitors all deployments in real time. Need a shift adjustment at 3 AM? We answer. Every time.',
   },
   {
-    icon: '🎓',
+    icon: <GraduationCap size={24} />,
     title: 'Ongoing Tactical & Compliance Training',
     desc: 'Officers complete monthly scenario-based drills covering active threat response, first aid, de-escalation, and jurisdiction-specific legal updates.',
   },
   {
-    icon: '⚡',
+    icon: <Zap size={24} />,
     title: 'Sub-60-Minute Rapid Deployment',
     desc: 'Emergency coverage gap? Our on-call response network dispatches a qualified replacement officer within 60 minutes—guaranteed in writing.',
   },
