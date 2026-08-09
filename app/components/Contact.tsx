@@ -94,7 +94,7 @@ export default function Contact() {
                   <div>
                     <strong>{item.label}</strong>
                     {item.href ? (
-                      <a href={item.href} style={{ color: 'rgba(255,255,255,0.7)' }}>{item.value}</a>
+                      <a href={item.href} style={{ color: 'rgba(0, 0, 0, 0.7)' }}>{item.value}</a>
                     ) : (
                       <span style={{ whiteSpace: 'pre-line' }}>{item.value}</span>
                     )}
