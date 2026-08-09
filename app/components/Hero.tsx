@@ -55,58 +55,76 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="container">
-          <div className="hero-content">
+        <div className="hero-container">
+          <div className="hero-split">
+            <div className="hero-content">
+              <h1>
+                Protecting What <br />
+                <span className="accent">Matters Most</span> — <br />
+                Around the Clock.
+              </h1>
 
-            <h1>
-              Protecting What <br />
-              <span className="accent">Matters Most</span> — <br />
-              Around the Clock.
-            </h1>
+              <p className="hero-sub">
+                Combatant Securitas delivers elite armed and unarmed guard services for
+                corporate campuses, residential communities, high-profile events, and executive
+                principals. Precision. Discretion. Unwavering reliability.
+              </p>
 
-            <p className="hero-sub">
-              Combatant Securitas delivers elite armed and unarmed guard services for
-              corporate campuses, residential communities, high-profile events, and executive
-              principals. Precision. Discretion. Unwavering reliability.
-            </p>
+              <div className="hero-actions">
+                <a href="#contact" className="btn-primary" id="hero-cta-primary" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                  Get a Custom Security Plan
+                </a>
+                <a href="tel:+919467295673" className="btn-secondary" id="hero-cta-call">
+                  Call +91 94672 95673
+                </a>
+              </div>
 
-            <div className="hero-actions">
-              <a href="#contact" className="btn-primary" id="hero-cta-primary" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                Get a Custom Security Plan
-              </a>
-              <a href="tel:+919467295673" className="btn-secondary" id="hero-cta-call">
-                Call +91 94672 95673
-              </a>
+              {/* Trust badges row */}
+              <div className="hero-trust-row">
+                <div className="trust-badge">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  Fully Licensed & Insured
+                </div>
+                <div className="trust-badge">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  24/7 Dispatch Center
+                </div>
+                <div className="trust-badge">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  Veteran-Owned
+                </div>
+                <div className="trust-badge">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  BSIS Compliant
+                </div>
+              </div>
             </div>
 
-            {/* Trust badges row */}
-            <div className="hero-trust-row">
-              {[
-                { text: 'Fully Licensed & Insured' },
-                { text: '24/7 Dispatch Center' },
-                { text: 'Veteran-Owned' },
-                { text: 'BSIS Compliant' },
-              ].map((b) => (
-                <div key={b.text} className="trust-badge">
-                  {b.text}
-                </div>
-              ))}
+            <div className="hero-side-image-wrapper">
+              <div className="hero-side-image">
+                <Image
+                  src="/main.png"
+                  alt="Professional Combatant Securitas Guard"
+                  fill
+                  priority
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Floating stat cards */}
-        <div className="hero-stats" aria-label="Key statistics">
-          {[
-            { num: '500+', label: 'Clients Protected' },
-            { num: '15+', label: 'Years Experience' },
-            { num: '< 24h', label: 'Response Time' },
-          ].map((s) => (
-            <div key={s.label} className="stat-card">
-              <div className="stat-number">{s.num}</div>
-              <div className="stat-label">{s.label}</div>
-            </div>
-          ))}
+          {/* Statistics row at the bottom */}
+          <div className="hero-stats" aria-label="Key statistics">
+            {[
+              { num: '500+', label: 'Clients Protected' },
+              { num: '15+', label: 'Years Experience' },
+              { num: '< 24h', label: 'Response Time' },
+            ].map((s) => (
+              <div key={s.label} className="stat-card">
+                <div className="stat-number">{s.num}</div>
+                <div className="stat-label">{s.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
       </section>

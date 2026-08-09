@@ -30,7 +30,7 @@ export default function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMenuOpen(false);
-    
+
     if (href.startsWith('/#')) {
       const hash = href.substring(1); // e.g., '#services'
       if (pathname === '/') {
