@@ -23,19 +23,20 @@ function useParticles(count: number): Particle[] {
 }
 
 export default function Hero() {
-  const particles = useParticles(14);
+  const particles = useParticles(20);
   return (
     <>
       {/* ── Hero ── */}
       <section className="hero" id="home" aria-label="Hero">
         <div className="hero-bg">
           <Image
-            src="/hero_guard_new.png"
-            alt="Professional Combatant Securitas operations center"
+            src="/ai_hero_guard.png"
+            alt="AI Professional Combatant Securitas operations center"
             fill
-            style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.25 }}
+            style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
             priority
           />
+          <div className="hero-overlay"></div>
         </div>
 
         {/* Decorative particles */}
@@ -56,77 +57,74 @@ export default function Hero() {
         </div>
 
         <div className="hero-container">
-          <div className="hero-split">
-            <div className="hero-content">
-              <h1>
-                Protecting What <br />
-                <span className="accent">Matters Most</span> — <br />
-                Around the Clock.
-              </h1>
+          <div className="hero-content">
+            <div className="badge-glow">
+              <span className="badge-text">Next-Generation Security Solutions</span>
+            </div>
+            
+            <h1 className="hero-title">
+              Protecting What <br />
+              <span className="accent">Matters Most</span> <br />
+              Around the Clock.
+            </h1>
 
-              <p className="hero-sub">
-                Combatant Securitas delivers elite armed and unarmed guard services for
-                corporate campuses, residential communities, high-profile events, and executive
-                principals. Precision. Discretion. Unwavering reliability.
-              </p>
+            <p className="hero-sub">
+              Combatant Securitas delivers elite armed and unarmed guard services for
+              corporate campuses, residential communities, high-profile events, and executive
+              principals. Precision. Discretion. Unwavering reliability.
+            </p>
 
-              <div className="hero-actions">
-                <a href="#contact" className="btn-primary" id="hero-cta-primary" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                  Get a Custom Security Plan
-                </a>
-                <a href="tel:+919467295673" className="btn-secondary" id="hero-cta-call">
-                  Call +91 94672 95673
-                </a>
-              </div>
-
-              {/* Trust badges row */}
-              <div className="hero-trust-row">
-                <div className="trust-badge">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  Fully Licensed & Insured
-                </div>
-                <div className="trust-badge">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  24/7 Dispatch Center
-                </div>
-                <div className="trust-badge">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  Veteran-Owned
-                </div>
-                <div className="trust-badge">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  BSIS Compliant
-                </div>
-              </div>
+            <div className="hero-actions">
+              <a href="#contact" className="btn-primary-glow" id="hero-cta-primary" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                Get a Custom Security Plan
+              </a>
+              <a href="tel:+919467295673" className="btn-secondary-outline" id="hero-cta-call">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Call +91 94672 95673
+              </a>
             </div>
 
-            <div className="hero-side-image-wrapper">
-              <div className="hero-side-image">
-                <Image
-                  src="/main.png"
-                  alt="Professional Combatant Securitas Guard"
-                  fill
-                  priority
-                />
+            {/* Trust badges row */}
+            <div className="hero-trust-row">
+              <div className="trust-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Fully Licensed & Insured
+              </div>
+              <div className="trust-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                24/7 Dispatch Center
+              </div>
+              <div className="trust-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Veteran-Owned
               </div>
             </div>
           </div>
 
-          {/* Statistics row at the bottom */}
-          <div className="hero-stats" aria-label="Key statistics">
-            {[
-              { num: '500+', label: 'Clients Protected' },
-              { num: '15+', label: 'Years Experience' },
-              { num: '< 24h', label: 'Response Time' },
-            ].map((s) => (
-              <div key={s.label} className="stat-card">
-                <div className="stat-number">{s.num}</div>
-                <div className="stat-label">{s.label}</div>
+          <div className="hero-visual">
+            <div className="glass-panel">
+              <div className="glass-stats">
+                {[
+                  { num: '500+', label: 'Clients Protected', icon: 'shield' },
+                  { num: '15+', label: 'Years Experience', icon: 'star' },
+                  { num: '< 24h', label: 'Response Time', icon: 'zap' },
+                ].map((s) => (
+                  <div key={s.label} className="glass-stat-item">
+                    <div className="stat-icon-wrapper">
+                      {s.icon === 'shield' && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
+                      {s.icon === 'star' && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>}
+                      {s.icon === 'zap' && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>}
+                    </div>
+                    <div className="stat-text-wrapper">
+                      <div className="glass-stat-num">{s.num}</div>
+                      <div className="glass-stat-label">{s.label}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
-
       </section>
 
       {/* ── Social Proof Banner ── */}
@@ -141,7 +139,6 @@ export default function Hero() {
             'TechSphere Conference',
             'Sterling Logistics',
             'Crestview Estates',
-            'Summit Investment Bank',
             // duplicate for seamless loop
             'Meridian Capital Group',
             'Northgate Plaza Mall',
@@ -150,7 +147,6 @@ export default function Hero() {
             'TechSphere Conference',
             'Sterling Logistics',
             'Crestview Estates',
-            'Summit Investment Bank',
           ].map((name, i) => (
             <div key={i} className="proof-item" role="listitem">
               <div className="proof-dot" aria-hidden="true" />

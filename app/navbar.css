@@ -37,8 +37,13 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: 800;
-  color: var(--white);
+  color: #ffffff;
   letter-spacing: 0.02em;
+  transition: var(--transition);
+}
+
+.navbar.scrolled .logo-name {
+  color: var(--white);
 }
 
 .logo-tagline {
@@ -58,10 +63,14 @@
 .nav-link {
   font-size: 0.8rem;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
   transition: var(--transition);
   position: relative;
   letter-spacing: 0.03em;
+}
+
+.navbar.scrolled .nav-link {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .nav-link::after {
@@ -76,7 +85,11 @@
 }
 
 .nav-link:hover {
-  color: var(--white);
+  color: var(--gold);
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: var(--gold);
 }
 
 .nav-link:hover::after {
@@ -113,9 +126,13 @@
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--white);
+  background: #ffffff;
   border-radius: 2px;
   transition: var(--transition);
+}
+
+.navbar.scrolled .hamburger span {
+  background: var(--white);
 }
 
 .hamburger.open span:nth-child(1) {
