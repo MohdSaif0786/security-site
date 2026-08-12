@@ -43,13 +43,12 @@ export default function Contact() {
         console.warn('Missing Google App Script URL. Simulating submission.');
         await new Promise((r) => setTimeout(r, 1200));
       } else {
-        // Use URL-encoded format which is most reliable for Google Apps Script doPost(e)
+     
         const formBody = Object.keys(form)
           .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(form[key as keyof FormData]))
           .join('&');
 
-        // 'no-cors' is necessary here so the browser doesn't block the request,
-        // though we won't be able to read the response payload.
+
         await fetch(scriptUrl, {
           method: 'POST',
           headers: {
@@ -111,18 +110,86 @@ export default function Contact() {
           {/* Right: form */}
           <div className="contact-form-wrap">
             {submitted ? (
-              <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
-                <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
-                  <CheckCircle size={56} color="#10b981" />
+              <div style={{
+                textAlign: 'center',
+                padding: '4rem 2rem',
+                backgroundColor: '#ffffff',
+                border: '1px solid rgba(0,0,0,0.08)',
+                borderRadius: '16px',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}>
+                <style>
+                  {`
+                    @keyframes scaleInCheck {
+                      0% { transform: scale(0.5); opacity: 0; }
+                      100% { transform: scale(1); opacity: 1; }
+                    }
+                    .success-icon-container {
+                      animation: scaleInCheck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+                    }
+                  `}
+                </style>
+                
+                {/* Subtle top accent */}
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '4px', background: 'var(--gold)' }}></div>
+
+                <div className="success-icon-container" style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
+                  <div style={{
+                    background: 'rgba(16, 185, 129, 0.1)',
+                    padding: '1.25rem',
+                    borderRadius: '50%',
+                    display: 'inline-flex',
+                    border: '1px solid rgba(16, 185, 129, 0.2)'
+                  }}>
+                    <CheckCircle size={56} color="#10b981" strokeWidth={1.5} />
+                  </div>
                 </div>
-                <h3 style={{ color: 'var(--white)', fontSize: '1.3rem', marginBottom: '0.75rem' }}>
-                  Request Received!
+                <h3 style={{ color: '#000000', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: 700, letterSpacing: '-0.02em' }}>
+                  Request Received
                 </h3>
-                <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: '1.7' }}>
-                  A senior security consultant will contact you within 2 business hours.
-                  If your need is urgent, call us directly at{' '}
-                  <a href="tel:+919467295673" style={{ color: 'var(--gold)' }}>+91 94672 95673</a>.
+                <p style={{ color: 'rgba(0,0,0,0.7)', fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '2.5rem', padding: '0 1rem' }}>
+                  Thank you for reaching out. A senior security consultant will review your details and contact you within <strong style={{ color: '#000000', fontWeight: 700 }}>2 business hours</strong> to discuss a custom plan.
                 </p>
+                <div style={{
+                  padding: '1.5rem',
+                  background: 'rgba(0,0,0,0.03)',
+                  borderRadius: '12px',
+                  display: 'inline-block',
+                  border: '1px solid rgba(0,0,0,0.05)',
+                  width: '100%',
+                  maxWidth: '300px'
+                }}>
+                  <p style={{ color: 'rgba(0,0,0,0.5)', fontSize: '0.8rem', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 700 }}>
+                    Need immediate assistance?
+                  </p>
+                  <a href="tel:+919467295673" style={{ color: '#000000', fontSize: '1.15rem', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                    <Phone size={18} color="var(--gold)" />
+                    +91 94672 95673
+                  </a>
+                </div>
+
+                <button
+                  onClick={() => setSubmitted(false)}
+                  style={{
+                    marginTop: '2.5rem',
+                    background: 'transparent',
+                    border: 'none',
+                    color: 'rgba(0,0,0,0.6)',
+                    padding: '0.75rem 1.5rem',
+                    cursor: 'pointer',
+                    fontSize: '0.9rem',
+                    transition: 'all 0.3s ease',
+                    textDecoration: 'underline',
+                    textUnderlineOffset: '4px',
+                    fontWeight: 500
+                  }}
+                  onMouseOver={(e) => { e.currentTarget.style.color = '#000000'; }}
+                  onMouseOut={(e) => { e.currentTarget.style.color = 'rgba(0,0,0,0.6)'; }}
+                >
+                  Send Another Request
+                </button>
               </div>
             ) : (
               <>
