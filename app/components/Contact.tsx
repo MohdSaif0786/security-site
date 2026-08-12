@@ -36,22 +36,26 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_APP_SCRIPT_URL;
+      // Replace this with your actual Google Apps Script Web App URL
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_APP_SCRIPT_URL || '';
       
       if (!scriptUrl) {
-        console.warn('Missing NEXT_PUBLIC_GOOGLE_APP_SCRIPT_URL. Simulating submission.');
+        console.warn('Missing Google App Script URL. Simulating submission.');
         await new Promise((r) => setTimeout(r, 1200));
       } else {
-        const formData = new FormData();
-        Object.entries(form).forEach(([key, value]) => {
-          formData.append(key, value as string);
-        });
+        // Use URL-encoded format which is most reliable for Google Apps Script doPost(e)
+        const formBody = Object.keys(form)
+          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(form[key as keyof FormData]))
+          .join('&');
 
         // 'no-cors' is necessary here so the browser doesn't block the request,
         // though we won't be able to read the response payload.
         await fetch(scriptUrl, {
           method: 'POST',
-          body: formData,
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+          },
+          body: formBody,
           mode: 'no-cors',
         });
       }
