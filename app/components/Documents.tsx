@@ -21,12 +21,7 @@ const documents = [
     filename: 'AA040625000442U_RC06062025.pdf',
     desc: 'Regulatory Compliance Certificate.',
   },
-  {
-    id: 'doc-01661',
-    title: 'Document 01661',
-    filename: '01661.pdf',
-    desc: 'Additional official documentation.',
-  },
+
 ];
 
 export default function Documents() {
