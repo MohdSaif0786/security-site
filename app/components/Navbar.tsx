@@ -51,7 +51,7 @@ export default function Navbar() {
       <nav className={`navbar${isSolid ? ' scrolled' : ''}`} role="navigation" aria-label="Main navigation">
         <div className="container navbar-inner">
           <Link href="/" className="logo" aria-label="Combatant Securitas Home" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src="/image.png" alt="Combatant Securitas Logo" style={{ height: '40px', marginRight: '12px' }} />
+            <img src="/logo.jpeg" alt="Combatant Securitas Logo" style={{ height: '40px', marginRight: '12px' }} />
             <div className="logo-text">
               <div className="logo-name" style={{ fontSize: '1.2rem' }}>COMBATANT SECURITAS</div>
             </div>

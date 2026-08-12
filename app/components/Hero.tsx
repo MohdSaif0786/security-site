@@ -65,13 +65,12 @@ export default function Hero() {
             <h1 className="hero-title">
               Protecting What <br />
               <span className="accent">Matters Most</span> <br />
-              Around the Clock.
             </h1>
 
             <p className="hero-sub">
               Combatant Securitas delivers elite armed and unarmed guard services for
               corporate campuses, residential communities, high-profile events, and executive
-              principals. Precision. Discretion. Unwavering reliability.
+              principals.
             </p>
 
             <div className="hero-actions">

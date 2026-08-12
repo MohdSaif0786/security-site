@@ -79,13 +79,13 @@ export default function Contact() {
             <p>
               Tell us about your property and security needs, and one of our senior security
               consultants will contact you within 2 business hours with a custom plan and
-              transparent pricing—no pressure, no obligation.
+              transparent pricing.
             </p>
 
             <div className="contact-details">
               {[
                 { icon: <Phone size={20} />, label: 'Phone (24/7)', value: '+91 94672 95673', href: 'tel:+919467295673' },
-                { icon: <Mail size={20} />, label: 'Email', value: 'tinga.bull@gmail.com', href: 'mailto:tinga.bull@gmail.com' },
+                { icon: <Mail size={20} />, label: 'Email', value: 'combatantsecuritas@gmail.com', href: 'mailto:combatantsecuritas@gmail.com' },
                 { icon: <MapPin size={20} />, label: 'Headquarters', value: 'SHOP NO 1960, CABIN NO.1, FIRST FLOOR\nSECTOR 45B, CHANDIGARH' },
                 { icon: <Clock size={20} />, label: 'Office Hours', value: 'Mon–Fri 7 AM–7 PM · 24/7 Dispatch' },
               ].map((item) => (

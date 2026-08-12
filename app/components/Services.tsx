@@ -6,25 +6,25 @@ const services = [
   {
     id: 'commercial',
     title: 'Commercial & Corporate Security',
-    desc: 'Protect your assets, employees, and brand reputation with dedicated on-site guards trained in access control, surveillance monitoring, and crisis de-escalation. Our corporate security officers integrate seamlessly into your workplace culture—visible enough to deter threats, professional enough to impress clients.',
+    desc: 'Dedicated on-site guards trained in access control, surveillance monitoring, and crisis de-escalation.',
     link: '#contact',
   },
   {
     id: 'events',
     title: 'Event & Crowd Management',
-    desc: 'From intimate VIP gatherings to stadium-scale conferences, our event security specialists create a safe environment where guests can focus on the experience. We handle perimeter control, credential verification, and real-time threat assessment with zero disruption to your event flow.',
+    desc: 'We handle perimeter control, credential verification, and real-time threat assessment with zero disruption to your event flow.',
     link: '#contact',
   },
   {
     id: 'residential',
     title: 'Residential & Patrol Services',
-    desc: 'Gated communities, luxury condominiums, and HOA neighborhoods trust our uniformed patrol officers to maintain order and provide rapid incident response. Regular roving patrols, visitor management, and 24/7 monitoring give residents genuine peace of mind.',
+    desc: 'Uniformed patrol officers to maintain order and provide rapid incident response. Regular roving patrols, visitor management, and 24/7 monitoring ',
     link: '#contact',
   },
   {
     id: 'executive',
     title: 'Executive Protection (EP)',
-    desc: 'Our close-protection specialists—drawn from military and law enforcement backgrounds—provide discreet, layered security for C-suite executives, dignitaries, and high-net-worth individuals. From advance route planning to secure transportation coordination, we anticipate threats before they materialize.',
+    desc: 'Discreet, layered security for C-suite executives, dignitaries, and high-net-worth individuals. From advance route planning to secure transportation coordination',
     link: '#contact',
   },
 ];
@@ -44,7 +44,7 @@ export default function Services() {
           <div className="gold-line centered" aria-hidden="true" />
           <p>
             Every deployment is custom-scoped to your property, threat profile, and operational
-            requirements—because no two clients face the same risk landscape.
+            requirements.
           </p>
         </div>
 

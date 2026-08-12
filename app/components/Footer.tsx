@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <div className="logo" style={{ marginBottom: '1.25rem', display: 'flex', alignItems: 'center' }}>
-              <img src="/image.png" alt="Combatant Securitas Logo" style={{ height: '40px', marginRight: '12px' }} />
+              <img src="/logo.jpeg" alt="Combatant Securitas Logo" style={{ height: '40px', marginRight: '12px' }} />
               <div className="logo-text">
                 <div className="logo-name" style={{ fontSize: '1.2rem' }}>COMBATANT SECURITAS</div>
               </div>
@@ -44,13 +44,14 @@ export default function Footer() {
             </p>
             <div className="footer-socials">
               {[
-                { icon: '𝕏', label: 'Twitter / X' },
-                { icon: 'in', label: 'LinkedIn' },
-                { icon: 'f', label: 'Facebook' },
+                { icon: 'IG', label: 'Instagram', href: 'https://www.instagram.com/combatantsecuritas/' },
+                { icon: '𝕏', label: 'Twitter / X', href: 'https://x.com/combatantsec' },
               ].map((s) => (
                 <a
                   key={s.label}
-                  href="#"
+                  href={s.href}
+                  target={s.href !== '#' ? '_blank' : undefined}
+                  rel={s.href !== '#' ? 'noopener noreferrer' : undefined}
                   className="social-btn"
                   aria-label={s.label}
                 >
@@ -86,7 +87,7 @@ export default function Footer() {
             </div>
             <div className="footer-contact-item">
               <strong style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.85rem', display: 'block', marginBottom: '0.15rem' }}>Email</strong>
-              <a href="mailto:tinga.bull@gmail.com" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>tinga.bull@gmail.com</a>
+              <a href="mailto:combatantsecuritas@gmail.com" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>combatantsecuritas@gmail.com</a>
             </div>
             <div className="footer-contact-item">
               <strong style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.85rem', display: 'block', marginBottom: '0.15rem' }}>Address</strong>

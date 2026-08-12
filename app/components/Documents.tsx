@@ -4,12 +4,6 @@ import '../sections.css';
 
 const documents = [
   {
-    id: 'doc-license',
-    title: 'Company License',
-    filename: 'license.pdf',
-    desc: 'Official Company License and Registration.',
-  },
-  {
     id: 'doc-certificate',
     title: 'Certificate of Allotment',
     filename: 'PBCHD3622874000_certificate_allotment.pdf',

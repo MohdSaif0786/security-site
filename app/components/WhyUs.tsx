@@ -56,8 +56,7 @@ export default function WhyUs() {
             <div className="gold-line" aria-hidden="true" />
             <p>
               In an industry plagued by high turnover and minimal oversight, Combatant Securitas operates
-              differently. We invest in people, process, and technology—so that when it matters
-              most, our clients experience zero failures.
+              differently
             </p>
 
             <div className="differentiators">
